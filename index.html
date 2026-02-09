@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Align Health & Wellness</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'playfair': ['"Playfair Display"', 'serif'],
+                        'inter': ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        'sage': '#166534', // Darker emerald for better contrast
+                        'stone': '#F8F5F2',
+                    }
+                },
+            },
+        }
+    </script>
+    
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Apply anti-aliasing for smoother fonts */
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    </style>
+</head>
+<body class="bg-stone font-inter">
+
+    <!-- Header with CTA -->
+    <header class="absolute top-0 left-0 right-0 z-20 p-4 md:px-8 md:py-6">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-6">
+                <h1 class="font-playfair text-xl md:text-2xl font-bold text-white tracking-wide">
+                    Align Health & Wellness
+                </h1>
+                <div class="hidden md:flex items-center gap-4 text-white font-semibold">
+                    <a href="#services" class="bg-emerald-800 text-white px-4 py-2 rounded-full text-sm hover:bg-emerald-900 transition-all shadow-md">Services</a>
+                    <a href="#about" class="bg-emerald-800 text-white px-4 py-2 rounded-full text-sm hover:bg-emerald-900 transition-all shadow-md">About</a>
+                    <a href="#contact" class="bg-emerald-800 text-white px-4 py-2 rounded-full text-sm hover:bg-emerald-900 transition-all shadow-md">Contact</a>
+                </div>
+            </div>
+            <a href="tel:+14032662283" class="bg-emerald-600 text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-emerald-700 transition-all duration-300 shadow-lg transform hover:scale-105">
+                Call Now
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen w-full flex items-start md:items-center justify-center p-4 pt-28 md:pt-4 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=2000');">
+            
+            <div class="absolute inset-0 bg-black/40"></div>
+
+            <div class="relative z-10 w-full max-w-md bg-white/10 backdrop-blur-md rounded-2xl shadow-2xl border border-white/20 p-8">
+                <h2 class="font-playfair text-3xl font-bold text-white mb-6 text-center">
+                    Book a Consultation
+                </h2>
+                <form id="contact-form" action="https://formspree.io/f/meezbjnn" method="POST" class="space-y-6">
+                    <div>
+                        <label for="fullName" class="block text-sm font-medium text-gray-200 mb-2">Full Name</label>
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            required
+                            class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all"
+                            placeholder="John Doe"
+                        />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-200 mb-2">Email Address</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                            class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all"
+                            placeholder="you@example.com"
+                        />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-200 mb-2">How can we help?</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            required
+                            class="w-full p-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-400 transition-all"
+                            placeholder="Tell us about your wellness goals..."
+                        ></textarea>
+                    </div>
+                    <button
+                        type="submit"
+                        class="w-full bg-emerald-600 py-3 rounded-lg font-bold text-white hover:bg-emerald-700 transform hover:scale-105 transition-all duration-300 shadow-lg"
+                    >
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-stone">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800">Our Core Services</h2>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600">Specialized treatments designed to restore your body's natural balance.</p>
+                <div class="mt-16 grid gap-10 md:grid-cols-3">
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800">Chiropractic Adjustments</h3>
+                        <p class="mt-4 text-gray-600">Precise adjustments to correct spinal alignment, relieve pain, and improve nervous system function.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800">Massage Therapy</h3>
+                        <p class="mt-4 text-gray-600">Therapeutic massage to release muscle tension, improve circulation, and complement your chiropractic care.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg transform hover:-translate-y-2 hover:shadow-xl transition-all duration-300">
+                        <h3 class="font-playfair text-2xl font-bold text-gray-800">Spinal Decompression</h3>
+                        <p class="mt-4 text-gray-600">A non-surgical treatment for herniated discs, sciatica, and chronic lower back pain.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                    <div class="md:w-1/2">
+                        <div class="bg-white rounded-lg shadow-2xl overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?auto=format&fit=crop&w=800&q=80" alt="Dr. John Doe" class="w-full">
+                            <div class="p-6 text-center">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-800">Dr. John Doe</h3>
+                                <p class="mt-1 text-emerald-600 text-sm font-semibold tracking-wider uppercase">15+ Years in Corrective Chiropractic Care</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800">Welcome to a Higher Standard of Care</h2>
+                        <p class="mt-6 text-lg text-gray-600 leading-relaxed">
+                            Align Health & Wellness is a sanctuary for those seeking to reconnect with their body's innate ability to heal. Our mission is to provide compassionate, personalized care that goes beyond temporary fixes to create lasting health. We believe in a partnership with our patients, empowering them with the knowledge to live a vibrant, pain-free life.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 bg-stone">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800">What Our Patients Say</h2>
+                <div class="mt-16 grid gap-10 md:grid-cols-3">
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic">"I've never felt better. The team at Align Health truly listens and provides incredible care. My back pain is completely gone."</p>
+                        <p class="mt-4 font-bold text-gray-800">- Sarah L.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic">"A truly professional and welcoming environment. They helped me recover from a sports injury faster than I ever thought possible."</p>
+                        <p class="mt-4 font-bold text-gray-800">- Michael B.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <p class="text-gray-600 italic">"From the moment I walked in, I knew I was in good hands. The personalized treatment plan has made a world of difference."</p>
+                        <p class="mt-4 font-bold text-gray-800">- Jessica P.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Contact Section -->
+        <section id="contact" class="py-20 bg-white text-center">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-800">Visit Our Clinic</h2>
+                <p class="mt-4 text-lg text-gray-600">We look forward to welcoming you.</p>
+                <div class="mt-8 text-lg text-gray-800">
+                    <p>1918 Kensington Rd NW, Calgary, AB T2N 3R5</p>
+                    <p class="mt-2">Phone: (403) 266-2283</p>
+                    <a href="https://www.google.com/maps/place/Align+Health+%26+Wellness/@51.0527018,-114.1045434,21z/data=!3m1!5s0x53716fc225b1e509:0x66567b234554f2de!4m15!1m8!3m7!1s0x53716fc6b3fcd74d:0xc3c18d0f5a9309b9!2s1918+Kensington+Rd+NW,+Calgary,+AB+T2N+3R5,+Canada!3b1!8m2!3d51.0527492!4d-114.1044891!16s%2Fg%2F11gmz3n9l8!3m5!1s0x53716e4cc576268d:0xacbdab3f3e6af142!8m2!3d51.0527839!4d-114.1044463!16s%2Fg%2F1tdqb7m2?entry=ttu&g_ep=EgoyMDI2MDIwMS4wIKXMDSoASAFQAw%3D%3D" 
+                    target="_blank" class="mt-4 inline-block text-emerald-600 font-bold hover:underline">Get Directions</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6">
+        <p>&copy; 2026 Align Health & Wellness. All Rights Reserved.</p>
+        <div class="flex justify-center gap-6 mt-4">
+            <span class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
+            </span>
+            <span class="text-gray-400 hover:text-white transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.012-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7a5 5 0 100 10 5 5 0 000-10zm0 8a3 3 0 110-6 3 3 0 010 6zm4.878-8.252a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z" clip-rule="evenodd" />
+                </svg>
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        // Reset the form when the page is loaded (or reloaded after back navigation)
+        window.addEventListener('pageshow', () => {
+            const form = document.getElementById('contact-form');
+            if (form) {
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>
